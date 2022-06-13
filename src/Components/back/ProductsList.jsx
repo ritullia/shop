@@ -1,16 +1,17 @@
 import { useContext } from 'react';
 import BackContext from '../../Contexts/BackContext';
-import ProductLine from './ProductLine';
 import Loader from './Loader';
+import ProductLine from './ProductLine';
 import ProductLineEmpty from './ProductLineEmpty';
 
 function ProductsList() {
     const { products } = useContext(BackContext);
+
     return (
         <div className="col-7">
-            <div className="card">
+            <div className="card mt-4">
                 <div className="card-header">
-                    <h1>Produktu sarasas</h1>
+                    <h2>Produktų Sąrašas</h2>
                 </div>
                 <div className="card-body">
                     <ul className="list-group">
@@ -24,7 +25,7 @@ function ProductsList() {
                                 ></ProductLine>
                             ))
                         ) : (
-                            <ProductLineEmpty></ProductLineEmpty>
+                            <ProductLineEmpty />
                         )}
                     </ul>
                 </div>

@@ -1,6 +1,6 @@
 function NavBar() {
     return (
-        <div class="col-12">
+        <div className="col-12">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="/">
                     BiG Shop
