@@ -15,6 +15,22 @@ h1 {
     color: crimson;
 }
 
+.message-bin{
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    div{
+        min-width: 400px;
+    }
+}
+
+.modal{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.255);
+}
+
 .loader-bin {
     display: flex;
     width: 100%;
