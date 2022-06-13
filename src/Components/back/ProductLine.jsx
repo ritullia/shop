@@ -2,7 +2,8 @@ import { useContext } from 'react';
 import BackContext from '../../Contexts/BackContext';
 
 function ProductLine({ product }) {
-    const { setDeleteProductData } = useContext(BackContext);
+    const { setDeleteProductData, setModalProductData } =
+        useContext(BackContext);
 
     return (
         <li className="list-group-item">
@@ -27,6 +28,7 @@ function ProductLine({ product }) {
                     <button
                         type="button"
                         className="btn btn-outline-success mr-2 fu"
+                        onClick={() => setModalProductData(product)}
                     >
                         Redaguoti
                     </button>

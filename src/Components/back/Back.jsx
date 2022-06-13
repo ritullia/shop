@@ -14,6 +14,8 @@ function Back() {
     const [lastProductUpdate, setLastProductUpdate] = useState(Date.now());
     const [message, setMessage] = useState({ show: false });
 
+    const [modalProductData, setModalProductData] = useState(null);
+
     const [createProductData, setCreateProductData] = useState(null);
     const [deleteProductData, setDeleteProductData] = useState(null);
 
@@ -61,6 +63,8 @@ function Back() {
                 setCreateProductData,
                 message,
                 setDeleteProductData,
+                modalProductData,
+                setModalProductData,
             }}
         >
             <div className="container">

@@ -11,17 +11,20 @@ const empty = {
 function ProductEdit() {
     const [inputs, setInputs] = useState(empty);
 
-    const { setCreateProductData } = useContext(BackContext);
+    const { modalProductData } = useContext(BackContext);
 
     const handleInputs = (e, input) => {
         setInputs((i) => ({ ...i, [input]: e.target.value }));
     };
 
     const edit = () => {
-        setCreateProductData({ ...inputs, price: parseFloat(inputs.price) });
+        // setCreateProductData({ ...inputs, price: parseFloat(inputs.price) });
         setInputs(empty);
     };
 
+    if (modalProductData === null) {
+        return null;
+    }
     return (
         <div className="modal" tabindex="-1">
             <div className="modal-dialog modal-dialog-centered">
@@ -40,10 +43,10 @@ function ProductEdit() {
                                         <div className="col-12">
                                             <div className="form-group">
                                                 <label className="fu ">
-                                                    Pavadinimas
+                                                    Pavadinimas:
                                                 </label>
                                                 <input
-                                                    type="email"
+                                                    type="text"
                                                     className="form-control"
                                                     value={inputs.title}
                                                     onChange={(e) =>
@@ -54,11 +57,11 @@ function ProductEdit() {
                                         </div>
                                         <div className="col-4">
                                             <div className="form-group">
-                                                <label className="fu ">
-                                                    Kaina
+                                                <label className="fu gray ">
+                                                    Kaina:
                                                 </label>
                                                 <input
-                                                    type="email"
+                                                    type="text"
                                                     className="form-control"
                                                     value={inputs.price}
                                                     onChange={(e) =>
@@ -69,11 +72,11 @@ function ProductEdit() {
                                         </div>
                                         <div className="col-8">
                                             <div className="form-group">
-                                                <label className="fu ">
-                                                    Kodas
+                                                <label className="fu gray">
+                                                    Kodas:
                                                 </label>
                                                 <input
-                                                    type="email"
+                                                    type="text"
                                                     className="form-control"
                                                     value={inputs.code}
                                                     onChange={(e) =>
@@ -84,11 +87,12 @@ function ProductEdit() {
                                         </div>
                                         <div className="col-12">
                                             <div className="form-group">
-                                                <label className="fu ">
+                                                <label className="fu gray ">
                                                     Aprasymas
                                                 </label>
                                                 <textarea
                                                     className="form-control"
+                                                    rows="3"
                                                     value={inputs.description}
                                                     onChange={(e) =>
                                                         handleInputs(
@@ -96,8 +100,6 @@ function ProductEdit() {
                                                             'description'
                                                         )
                                                     }
-                                                    placeholder="Required example textarea"
-                                                    required
                                                 ></textarea>
                                             </div>
                                         </div>

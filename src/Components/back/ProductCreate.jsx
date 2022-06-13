@@ -36,9 +36,11 @@ function ProductCreate() {
                         <div className="row">
                             <div className="col-12">
                                 <div className="form-group">
-                                    <label className="fu ">Pavadinimas</label>
+                                    <label className="fu gray ">
+                                        Pavadinimas:
+                                    </label>
                                     <input
-                                        type="email"
+                                        type="text"
                                         className="form-control"
                                         value={inputs.title}
                                         onChange={(e) =>
@@ -49,9 +51,9 @@ function ProductCreate() {
                             </div>
                             <div className="col-4">
                                 <div className="form-group">
-                                    <label className="fu ">Kaina</label>
+                                    <label className="fu gray ">Kaina:</label>
                                     <input
-                                        type="email"
+                                        type="text"
                                         className="form-control"
                                         value={inputs.price}
                                         onChange={(e) =>
@@ -62,9 +64,9 @@ function ProductCreate() {
                             </div>
                             <div className="col-8">
                                 <div className="form-group">
-                                    <label className="fu ">Kodas</label>
+                                    <label className="fu gray ">Kodas:</label>
                                     <input
-                                        type="email"
+                                        type="text"
                                         className="form-control"
                                         value={inputs.code}
                                         onChange={(e) =>
@@ -75,15 +77,15 @@ function ProductCreate() {
                             </div>
                             <div className="col-12">
                                 <div className="form-group">
-                                    <label className="fu ">Aprasymas</label>
+                                    <label className="fu gray ">
+                                        Aprasymas:
+                                    </label>
                                     <textarea
                                         className="form-control"
                                         value={inputs.description}
                                         onChange={(e) =>
                                             handleInputs(e, 'description')
                                         }
-                                        placeholder="Required example textarea"
-                                        required
                                     ></textarea>
                                 </div>
                             </div>

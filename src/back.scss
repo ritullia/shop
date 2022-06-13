@@ -11,8 +11,16 @@ $fu: 'Ubuntu Mono',
     font-family: $fs;
 }
 
-h1 {
-    color: crimson;
+h2 {
+    color: skyblue;
+}
+.up{
+    text-transform: uppercase;
+}
+
+.gray{
+    color: gray;
+
 }
 
 .message-bin{
@@ -125,21 +133,20 @@ h1 {
 
 .product-line{
     display: flex;
-       
-        align-items: center;
-        justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     &__content{
         display: flex;
         flex-direction:column;
         align-items: center;
         justify-content: center;
         &__top{
-                 display: flex;
+                display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 width: 100%;
             div{
-                padding: 0.5px;
+                padding: 0 5px;
             }
             &__title{
                 font-size: 18px;
@@ -155,6 +162,7 @@ h1 {
                 color: gray;
                 font-size: 14px;
                 letter-spacing: 0.5px;
+                font-family: $fu;
                 
             }
         }
@@ -170,7 +178,6 @@ h1 {
        display: flex;
        align-items: center;
        justify-content: space-between;
-
        button {
            text-transform: uppercase;
        }
